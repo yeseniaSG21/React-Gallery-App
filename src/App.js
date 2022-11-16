@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Route, Routes } from 'react-router-dom';
-import axios from 'axios';
-
+import React from 'react';
+//import { Route, Routes } from 'react-router-dom';
+//import axios from 'axios';
+//{ useState, useEffect } 
 
 function App() {
   return (
