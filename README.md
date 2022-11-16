@@ -9,7 +9,7 @@ This project:
 * Used the tool, Axios to fetch data from the Flickr API and use it to display images in your app.
 * Added logic to handle the search and various requirements of the project.
 * Added to the supplied CSS to personalize the project.
-* Expaneded my knowledge of React.
+* Expanded my knowledge and practice of React.
 
 ## To Start Project:
 * Run npm start in terminal 
