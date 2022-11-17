@@ -123,3 +123,7 @@ input {
     width: 100px;
   }
 }
+
+.Robot {
+  background-image: url(./Images/Robot.png);
+}
