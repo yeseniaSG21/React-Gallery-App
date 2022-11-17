@@ -1,3 +1,4 @@
+//Import our require dependencies 
 import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import axios from "axios";
@@ -12,7 +13,7 @@ import NotFound from "./components/NotFound";
 
 function App() {
   const [photo, setPhoto] = useState();
-  const 
+  const [] = useState();
 
   useEffect(() => {
 
