@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 //import { Route, Routes } from 'react-router-dom';
 //import axios from 'axios';
-//{ useState, useEffect } 
+
 
 function App() {
+  const [photo, setPhoto] = useState();
+  useEffect( () => {}, []);
+
   return (
     <div>App</div>
   )
