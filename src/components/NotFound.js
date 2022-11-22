@@ -8,7 +8,7 @@ const mystye = {
 
 const NotFound = (props) => {
     return (
-        <li class="not-found">
+        <li className="not-found">
             <h3>Sorry! No Results Found</h3>
             <img style={mystye} src={require('./Robot.png')} alt='' />
             <p>Your search did not return any results. Please try again or return home.</p>
