@@ -12,7 +12,7 @@ import NotFound from "./components/NotFound";
 
 //This is our main container component that will Fetch, Request and Display the data 
 function App(props) {
-  const [photo, setPhoto] = useState([]);
+  const [photos, setPhotos] = useState([]);
   const [sunsets, setSunsets] = useState([]);
   const [mountains, setMountains] = useState([]);
   const [elephants, setElephants] = useState([]);
@@ -44,7 +44,7 @@ function App(props) {
         <Route path="/sunsets" element={<PhotoContainer data={sunsets} />} />
         <Route path="/mountains" element={<PhotoContainer data={mountains} />} />
         <Route path="/elephants" element={<PhotoContainer data={elephants} />} />
-        <Route path="/search/:keyword" element={<PhotoContainer data={photo} />} />
+        <Route path="/search/:keyword" element={<PhotoContainer data={photos} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
