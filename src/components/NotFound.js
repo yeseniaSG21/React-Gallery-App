@@ -6,6 +6,7 @@ const mystye = {
     height: '400px'
 };
 
+//When a route that provides no results, a message page is shown 
 const NotFound = (props) => {
     return (
         <li className="not-found">

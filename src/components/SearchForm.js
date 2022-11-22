@@ -7,6 +7,7 @@ const SearchForm = (props) => {
     const [searchText, setSearchText] = useState('');
     let navigate = useNavigate();
 
+    //This function will handle search submissions to a route path and later display in the App.js
     const handleSubmit = (e) => {
         e.preventDefault();
         props.onSearch(searchText);
