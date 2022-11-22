@@ -17,13 +17,7 @@ const App = (props) => {
   const [waterfalls, setWaterfalls] = useState([]);
   const [murals, setMurals] = useState([]);
 
-  useEffect(() => {
-    performSearch();
-    performSearch("flower");
-    performSearch("waterfalls");
-    performSearch("murals");
-  }, []);
-
+  //This function will fetch our data, with a default value of "flower"
   const performSearch = ( keyword = "flower" ) => {
     axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${keyword}&per_page=24&format=json&nojsoncallback=1`)
     .then((response) => {
@@ -43,6 +37,14 @@ const App = (props) => {
       console.log("Error fetching and parsing data", error);
     });
   };
+
+  //Display our data depending on state
+  useEffect(() => { 
+    performSearch();
+    performSearch("flower");
+    performSearch("waterfalls");
+    performSearch("murals");
+  }, []);
 
   return (
     <div className="container">

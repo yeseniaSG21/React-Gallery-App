@@ -1,5 +1,4 @@
 import React from "react";
-import NotFound from "./NotFound";
 import Photos from "./Photos";
 
 //Photo Container where photo data (from API) can be managed
@@ -7,9 +6,7 @@ import Photos from "./Photos";
 const PhotoContainer = (props) => {
     const photoData = props.data;
 
-    let photoList;
-    if (photoData.length > 0) {
-        photoList = photoData.map( photo => (
+    let photoList = photoData.map( photo => (
             <Photos 
                 id={photo.id}
                 key={photo.id}
@@ -17,10 +14,7 @@ const PhotoContainer = (props) => {
                 server={photo.server}
                 secret={photo.secret}
             />
-        ));
-    } else {
-        photoList = <NotFound />
-    }
+    ));
 
     return (
         <div className="photo-container">
