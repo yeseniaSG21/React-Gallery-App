@@ -37,7 +37,7 @@ const App = (props) => {
       } else {
         setPhotos(response.data.photos.photo);
       }
-    })
+      })
     .catch((error) => {
      // handle error
       console.log("Error fetching and parsing data", error);

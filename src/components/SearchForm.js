@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 //The SearchForm will allow users to search for photos using the search box 
+//Resource/Help from: https://teamtreehouse.com/library/data-fetching-in-react-refresh-2022/building-a-search-feature
 const SearchForm = (props) => {
     const [searchText, setSearchText] = useState('');
     let navigate = useNavigate();
@@ -18,11 +19,9 @@ const SearchForm = (props) => {
         <form className="search-form" onSubmit={handleSubmit}>
             <input 
                 type="search" 
-                onChange={(e) => { 
-                    setSearchText(e.target.value); 
-                }} 
+                onChange={e => {setSearchText(e.target.value)}}
                 name="search" 
-                placeholder="Search for a photo topic" 
+                placeholder="Search for a photo topic..." 
                 required
             />
             <button type="submit" className="search-button">
