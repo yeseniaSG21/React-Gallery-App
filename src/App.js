@@ -13,25 +13,27 @@ import NotFound from "./components/NotFound";
 //This is our main App component that will Fetch, Request and Display the data 
 const App = (props) => {
   const [photos, setPhotos] = useState([]);
-  const [sunsets, setSunsets] = useState([]);
-  const [landscapes, setLandscapes] = useState([]);
-  const [elephants, setElephants] = useState([]);
+  const [flower, setFlower] = useState([]);
+  const [waterfalls, setWaterfalls] = useState([]);
+  const [murals, setMurals] = useState([]);
 
   useEffect(() => {
     performSearch();
-    performSearch("sunsets");
-    performSearch("landscapes");
-    performSearch("elephants");
+    performSearch("flower");
+    performSearch("waterfalls");
+    performSearch("murals");
   }, []);
 
-  const performSearch = ( keyword = "sunsets" ) => {
+  const performSearch = ( keyword = "flower" ) => {
     axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${keyword}&per_page=24&format=json&nojsoncallback=1`)
     .then((response) => {
       // handle success
-      if (keyword === "sunsets") {
-        setSunsets(response.data.photos.photo);
-      } else if (keyword === "landscapes") {
-        setLandscapes(response.data.photos.photo);
+      if (keyword === "flower") {
+        setFlower(response.data.photos.photo);
+      } else if (keyword === "waterfalls") {
+        setWaterfalls(response.data.photos.photo);
+      } else if (keyword === "murals") {
+        setMurals(response.data.photos.photo);
       } else {
         setPhotos(response.data.photos.photo);
       }
@@ -47,10 +49,10 @@ const App = (props) => {
       <SearchForm onSearch={performSearch} />
       <Nav />
       <Routes>
-        <Route path="/" element={<Navigate to="/sunsets" />} />
-        <Route path="/sunsets" element={<PhotoContainer data={sunsets} />} />
-        <Route path="/landscapes" element={<PhotoContainer data={landscapes} />} />
-        <Route path="/elephants" element={<PhotoContainer data={elephants} />} />
+        <Route path="/" element={<Navigate to="/flower" />} />
+        <Route path="/flower" element={<PhotoContainer data={flower} />} />
+        <Route path="/waterfalls" element={<PhotoContainer data={waterfalls} />} />
+        <Route path="/murals" element={<PhotoContainer data={murals} />} />
         <Route path="/search/:keyword" element={<PhotoContainer data={photos} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

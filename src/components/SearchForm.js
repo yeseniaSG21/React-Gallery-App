@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+//The SearchForm will allow users to search for photos using the search box 
 const SearchForm = (props) => {
     const [searchText, setSearchText] = useState('');
     let navigate = useNavigate();
