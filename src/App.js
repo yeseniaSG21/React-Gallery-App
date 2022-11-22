@@ -46,6 +46,7 @@ const App = (props) => {
     performSearch("murals");
   }, []);
 
+  //Routes for each path, as well as a wildcard path for non-existing paths
   return (
     <div className="container">
       <SearchForm onSearch={performSearch} />
