@@ -13,5 +13,4 @@ This project:
 * Expanded my knowledge and practice of React.
 
 ## To Start Project:
-* Run npm start in terminal 
-* Open http://localhost:3000 to view it in your browser.
+* Run npm start in terminal and open http://localhost:3000 to view in browser.
