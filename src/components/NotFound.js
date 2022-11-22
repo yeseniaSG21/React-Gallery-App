@@ -9,11 +9,11 @@ const mystye = {
 //When a route that provides no results, a message page is shown 
 const NotFound = (props) => {
     return (
-        <li className="not-found">
+        <div className="not-found">
             <h2>Sorry! No Results Found!</h2>
             <h3>Please try a new search or refresh browser.</h3>
             <img style={mystye} src={require('./Robot.png')} alt='' />
-        </li>
+        </div>
     );
 };
 
