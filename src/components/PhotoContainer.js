@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Photos from "./Photos";
 
 //Photo Container where photo data (from API) can be managed

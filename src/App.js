@@ -10,8 +10,8 @@ import SearchForm from "./components/SearchForm";
 import PhotoContainer from "./components/PhotoContainer";
 import NotFound from "./components/NotFound";
 
-//This is our main container component that will Fetch, Request and Display the data 
-function App(props) {
+//This is our main App component that will Fetch, Request and Display the data 
+const App = (props) => {
   const [photos, setPhotos] = useState([]);
   const [sunsets, setSunsets] = useState([]);
   const [mountains, setMountains] = useState([]);
