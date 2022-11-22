@@ -10,7 +10,7 @@ import SearchForm from "./components/SearchForm";
 import PhotoContainer from "./components/PhotoContainer";
 import NotFound from "./components/NotFound";
 
-
+//This is our main container component that will Fetch, Request and Display the data 
 function App(props) {
   const [photo, setPhoto] = useState([]);
   const [sunsets, setSunsets] = useState([]);
@@ -24,15 +24,16 @@ function App(props) {
     performSearch("elepahnts");
   }, []);
 
-  axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${tags}&per_page=24&format=json&nojsoncallback=1`)
-  .then(function (response) {
-    // handle success
-  })
-  .catch(function (error) {
-    // handle error
-    console.log(error);
-  });
-
+  const performSearch = ( keyword = "sunsets" ) => {
+    axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${keyword}&per_page=24&format=json&nojsoncallback=1`)
+    .then((response) => {
+      // handle success
+    })
+    .catch((error) => {
+     // handle error
+      console.log("Error fetching and parsing data", error);
+    });
+  };
 
   return (
     <div className="container">
@@ -43,7 +44,7 @@ function App(props) {
         <Route path="/sunsets" element={<PhotoContainer data={sunsets} />} />
         <Route path="/mountains" element={<PhotoContainer data={mountains} />} />
         <Route path="/elephants" element={<PhotoContainer data={elephants} />} />
-        <Route path="/search/:keyword" element={<PhotoContainer data={photos} />} />
+        <Route path="/search/:keyword" element={<PhotoContainer data={photo} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

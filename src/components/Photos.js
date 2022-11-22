@@ -1,7 +1,7 @@
 import React from "react";
 
 //Photo componenet to display the li and img elements of each photo
-const Photo = (props) => {
+const Photos = (props) => {
     return (
         <li>
             <img 
