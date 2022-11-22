@@ -3,7 +3,7 @@
 This project uses the very popular and in-demand React library to create an image gallery app. With the help of the powerful "MVC" (Model, View, Controller) library, the app will be built in the style of modern single-page applications to keep it fast, modular, and in sync with current web development trends.
 * Images in 'Mockup-Images' shows examples of how the app will look when users get a result or not. 
 * Adjusted CSS styling by changing color and picture borders, as well as adding an image to "NotFound.js".
-* Also changed the icon displaying on the browser tag. 
+* Also changed the icon displaying on the browser tab. 
 
 This project:
 
