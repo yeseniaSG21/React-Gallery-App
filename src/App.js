@@ -38,7 +38,7 @@ const App = (props) => {
     });
   };
 
-  //Display our data depending on state
+  //Display our data depending on state called
   useEffect(() => { 
     performSearch();
     performSearch("flower");
